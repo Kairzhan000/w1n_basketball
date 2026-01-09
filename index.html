@@ -20,28 +20,35 @@
   <body>
     <!-- HEADER -->
     <header id="main-header">
-  <nav class="nav-container" aria-label="Главное меню">
+      <nav class="nav-container" aria-label="Главное меню">
+        <div class="logo">
+          <img
+            src="./static/img/win-dekstop-logo.png"
+            alt="Логотип W1N basketball"
+          />
+        </div>
+        <div class="lang-switch">
+          <button id="lang-ru" class="active">RU</button>
+          <span>|</span>
+          <button id="lang-kz">KZ</button>
+        </div>
 
-    <div class="logo">
-      <img src="./static/img/win-dekstop-logo.png" alt="Логотип W1N basketball">
-    </div>
+        <div class="burger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
 
-    <div class="burger">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <ul class="nav-links">
-      <li><a href="#about">Тренировочные программы</a></li>
-      <li><a href="#teams">Главный тренер</a></li>
-      <li><a href="#contact">Контакты</a></li>
-      <li><a href="#registration">Записаться</a></li>
-    </ul>
-
-  </nav>
-</header>
-
+        <ul class="nav-links">
+          <li>
+            <a href="#about" data-key="nav_programs">Тренировочные программы</a>
+          </li>
+          <li><a href="#teams" data-key="nav_coach">Главный тренер</a></li>
+          <li><a href="#contact" data-key="nav_contacts">Контакты</a></li>
+          <li><a href="#registration" data-key="nav_join">Записаться</a></li>
+        </ul>
+      </nav>
+    </header>
 
     <!-- HERO SECTION -->
     <section class="hero">
@@ -50,20 +57,26 @@
         Ваш браузер не поддерживает видео.
       </video>
       <div class="content">
-        <p class="subtitle">Следующая легенда — ты.</p>
-        <h1 class="main-title">
+        <p class="subtitle" data-key="hero_subtitle">Следующая легенда — ты.</p>
+        <h1 class="main-title" data-key="hero_title">
           Мы баскетбольная секция <br />
           <span class="highlight-color">W1N basketball</span>
         </h1>
-        <button class="hero-btn open-modal">Записаться</button>
+        <a href="https://wa.link/515nar">
+            <button class="hero-btn" data-key="hero_btn">
+                Записаться
+            </button>
+        </a>
       </div>
     </section>
 
     <!-- ФИЛОСОФИЯ -->
     <section class="filosofia">
       <div class="content-left">
-        <h2 class="filosofia-title">Философия <span>W1N</span></h2>
-        <p class="filosofia-text">
+        <h2 class="filosofia-title" data-key="filo_title">
+          Философия <span>W1N</span>
+        </h2>
+        <p class="filosofia-text" data-key="filo_text">
           Мы не просто учим играть в баскетбол. Мы воспитываем характер. В W1N
           ты найдешь команду единомышленников, готовую идти до конца. Каждый на
           паркете — ключевой игрок. Присоединяйся к тем, кто выбирает победу.
@@ -80,19 +93,40 @@
 
     <!-- ТРЕНИРОВОЧНЫЕ ПРОГРАММЫ -->
     <section id="about" class="training">
-      <h2 class="training-main-title">Тренировочные <span>программы</span></h2>
+      <h2 class="training-main-title" data-key="train_title">
+        Тренировочные <span>программы</span>
+      </h2>
 
       <div class="training-item">
-        <div class="training-image">
-          <img src="./static/img/group-train.png" alt="Групповые занятия" />
-        </div>
-        <div class="training-info">
-          <h3>Групповые занятия</h3>
-          <p>
-            Базовый фундамент и командная химия. Работа над техникой броска,
-            дриблингом и игровым мышлением в кругу единомышленников.
-          </p>
-        </div>
+  <div class="training-image">
+    <img src="./static/img/group-train.png" alt="Групповые занятия" />
+  </div>
+  <div class="training-info">
+    <h3 data-key="group_title">Групповые занятия-(22.000тг/12 занятии)</h3>
+    
+    <div class="training-list-container">
+      <!-- 1-й пункт (Сверху) -->
+      <div class="schedule-item">
+        <span data-key="group_junior">Младшая группа (7-13 лет)</span>
+        <a href="#" class="schedule-btn" data-key="get_schedule">УЗНАТЬ РАСПИСАНИЕ</a>
+      </div>
+
+      <!-- 2-й пункт (Посередине) -->
+      <div class="schedule-item">
+        <span data-key="group_senior">Старшая группа (14-21 лет)</span>
+        <a href="#" class="schedule-btn" data-key="get_schedule">УЗНАТЬ РАСПИСАНИЕ</a>
+      </div>
+
+      <!-- 3-й пункт (Снизу) -->
+      <div class="schedule-item">
+        <span data-key="group_pro">Старшая группа (16-21 лет)</span>
+        <a href="#" class="schedule-btn" data-key="get_schedule">УЗНАТЬ РАСПИСАНИЕ</a>
+      </div>
+    </div>
+
+  </div>
+</div>
+
       </div>
 
       <div class="training-item">
@@ -103,8 +137,8 @@
           />
         </div>
         <div class="training-info">
-          <h3>Индивидуальные занятия</h3>
-          <p>
+          <h3 data-key="individual_title">Индивидуальные занятия-(100.000тг/12 занятии)</h3>
+          <p data-key="individual_title_d">
             Персональный апгрейд твоих навыков. Фокус на деталях, разбор
             ситуаций 1х1 и интенсивная работа под личный запрос игрока.
           </p>
@@ -116,10 +150,11 @@
           <img src="./static/img/power-train.png" alt="Физическая подготовка" />
         </div>
         <div class="training-info">
-          <h3>Физическая подготовка</h3>
-          <p>
+          <h3 data-key="gym_title">Физическая подготовка-(60.000-80.000тг/12 занятии)</h3>
+          <p data-key="gym_title_d">
             Развитие взрывной силы, прыжка и выносливости. Подготовка тела к
             высоким нагрузкам, чтобы доминировать на паркете весь матч.
+            До 16 лет 60.000тг , от 16 лет 80.000тг
           </p>
         </div>
       </div>
@@ -127,13 +162,13 @@
 
     <!-- ТРЕНЕР -->
     <section id="teams" class="coach-section">
-      <h2 class="training-main-title coach-top-title">
+      <h2 class="training-main-title coach-top-title" data-key="couch">
         Главный <span>тренер</span>
       </h2>
       <div class="coach-flex">
         <div class="content-left">
           <h3 class="coach-name">Джакауов Айбек</h3>
-          <p class="filosofia-text">
+          <p class="filosofia-text" data-key="couch_d">
             — Гарантирую безопасность и комфорт на площадке. <br />
             — Внимателен к каждому игроку, независимо от уровня. <br />
             — Помогаю раскрыть потенциал, а не просто бросать мяч. <br /><br />
@@ -154,14 +189,19 @@
     <!-- ЗАПИСЬ -->
     <section id="registration" class="join-section">
       <div class="join-content">
-        <h2 class="training-main-title center">
+        <h2 class="training-main-title center" data-key="join_title">
           Стань частью <span>W1N</span>
         </h2>
-        <p class="join-text">
+        <p class="join-text" data-key="join_text">
           Мы ждем именно тебя. Неважно, какой у тебя уровень сейчас — в W1N мы
           вместе пройдем путь от первого броска до уверенной победы на паркете
         </p>
-        <button class="hero-btn open-modal">Записаться</button>
+        <a href="https://wa.link/515nar">
+            <button class="hero-btn" data-key="nav_join">
+          Записаться
+        </button>
+        </a>
+        
       </div>
     </section>
 
@@ -197,7 +237,11 @@
           <div class="contacts-grid">
             <div class="contact-item">
               <span>Адрес:</span>
-              <p> <a href="https://go.2gis.com/KW35b">HALYK ARENA (17-й микрорайон, 12)</a></p>
+              <p>
+                <a href="https://go.2gis.com/KW35b"
+                  >HALYK ARENA (17-й микрорайон, 12)</a
+                >
+              </p>
             </div>
             <div class="contact-item">
               <span>Телефон:</span>
@@ -205,7 +249,11 @@
             </div>
             <div class="contact-item">
               <span>Instagram:</span>
-              <p><a href="https://www.instagram.com/w1n.basketschool/">@w1n.basketschool</a></p>
+              <p>
+                <a href="https://www.instagram.com/w1n.basketschool/"
+                  >@w1n.basketschool</a
+                >
+              </p>
             </div>
           </div>
         </div>
@@ -214,6 +262,16 @@
         <p>&copy; 2026 W1N basketball</p>
       </div>
     </footer>
+    <!-- Модальное окно -->
+<div id="schedModal" class="sched-modal">
+  <div class="sched-modal-content">
+    <span class="sched-close">&times;</span>
+    <h2 id="schedTitle"></h2>
+    <div id="schedBody"></div>
+  </div>
+</div>
+
+
 
     <!-- JS для исчезающего header -->
     <script src="./static/js/header.js"></script>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>W1N-basketball</title>
+
+    <!-- Подключаем шрифты Google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Oswald:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Основной CSS -->
+    <link rel="stylesheet" href="./static/css/main.css" />
+
+    <!-- Основной JS -->
+    <script src="./static/js/main.js" defer></script>
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header id="main-header">
+  <nav class="nav-container" aria-label="Главное меню">
+
+    <div class="logo">
+      <img src="./static/img/win-dekstop-logo.png" alt="Логотип W1N basketball">
+    </div>
+
+    <div class="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <ul class="nav-links">
+      <li><a href="#about">Тренировочные программы</a></li>
+      <li><a href="#teams">Главный тренер</a></li>
+      <li><a href="#contact">Контакты</a></li>
+      <li><a href="#registration">Записаться</a></li>
+    </ul>
+
+  </nav>
+</header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <video autoplay muted loop playsinline id="bg-video">
+        <source src="./static/video/main-page.mp4" type="video/mp4" />
+        Ваш браузер не поддерживает видео.
+      </video>
+      <div class="content">
+        <p class="subtitle">Следующая легенда — ты.</p>
+        <h1 class="main-title">
+          Мы баскетбольная секция <br />
+          <span class="highlight-color">W1N basketball</span>
+        </h1>
+        <button class="hero-btn open-modal">Записаться</button>
+      </div>
+    </section>
+
+    <!-- ФИЛОСОФИЯ -->
+    <section class="filosofia">
+      <div class="content-left">
+        <h2 class="filosofia-title">Философия <span>W1N</span></h2>
+        <p class="filosofia-text">
+          Мы не просто учим играть в баскетбол. Мы воспитываем характер. В W1N
+          ты найдешь команду единомышленников, готовую идти до конца. Каждый на
+          паркете — ключевой игрок. Присоединяйся к тем, кто выбирает победу.
+        </p>
+      </div>
+      <div class="content-right">
+        <img
+          src="./static/img/mobile.png"
+          alt="Basketball Player"
+          class="filosofia-img"
+        />
+      </div>
+    </section>
+
+    <!-- ТРЕНИРОВОЧНЫЕ ПРОГРАММЫ -->
+    <section id="about" class="training">
+      <h2 class="training-main-title">Тренировочные <span>программы</span></h2>
+
+      <div class="training-item">
+        <div class="training-image">
+          <img src="./static/img/group-train.png" alt="Групповые занятия" />
+        </div>
+        <div class="training-info">
+          <h3>Групповые занятия</h3>
+          <p>
+            Базовый фундамент и командная химия. Работа над техникой броска,
+            дриблингом и игровым мышлением в кругу единомышленников.
+          </p>
+        </div>
+      </div>
+
+      <div class="training-item">
+        <div class="training-image">
+          <img
+            src="./static/img/individual-train.png"
+            alt="Индивидуальные занятия"
+          />
+        </div>
+        <div class="training-info">
+          <h3>Индивидуальные занятия</h3>
+          <p>
+            Персональный апгрейд твоих навыков. Фокус на деталях, разбор
+            ситуаций 1х1 и интенсивная работа под личный запрос игрока.
+          </p>
+        </div>
+      </div>
+
+      <div class="training-item">
+        <div class="training-image">
+          <img src="./static/img/power-train.png" alt="Физическая подготовка" />
+        </div>
+        <div class="training-info">
+          <h3>Физическая подготовка</h3>
+          <p>
+            Развитие взрывной силы, прыжка и выносливости. Подготовка тела к
+            высоким нагрузкам, чтобы доминировать на паркете весь матч.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ТРЕНЕР -->
+    <section id="teams" class="coach-section">
+      <h2 class="training-main-title coach-top-title">
+        Главный <span>тренер</span>
+      </h2>
+      <div class="coach-flex">
+        <div class="content-left">
+          <h3 class="coach-name">Джакауов Айбек</h3>
+          <p class="filosofia-text">
+            — Гарантирую безопасность и комфорт на площадке. <br />
+            — Внимателен к каждому игроку, независимо от уровня. <br />
+            — Помогаю раскрыть потенциал, а не просто бросать мяч. <br /><br />
+            «Моя задача — раскрыть потенциал каждого игрока и подготовить его к
+            любым вызовам на паркете».
+          </p>
+        </div>
+        <div class="content-right">
+          <img
+            src="./static/img/couch.png"
+            alt="Главный тренер"
+            class="filosofia-img"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ЗАПИСЬ -->
+    <section id="registration" class="join-section">
+      <div class="join-content">
+        <h2 class="training-main-title center">
+          Стань частью <span>W1N</span>
+        </h2>
+        <p class="join-text">
+          Мы ждем именно тебя. Неважно, какой у тебя уровень сейчас — в W1N мы
+          вместе пройдем путь от первого броска до уверенной победы на паркете
+        </p>
+        <button class="hero-btn open-modal">Записаться</button>
+      </div>
+    </section>
+
+    <!-- МОДАЛЬНОЕ ОКНО -->
+    <div class="modal-overlay" id="modal">
+      <div class="modal-content">
+        <button class="close-modal">&times;</button>
+        <h2 class="form-title">Заявка на <span>обучение</span></h2>
+        <form id="tg-form">
+          <input type="text" name="name" placeholder="Твое имя" required />
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Номер телефона"
+            required
+          />
+          <select name="group" required>
+            <option value="" disabled selected>Выбери группу</option>
+            <option value="group">Групповые занятия</option>
+            <option value="individual">Индивидуальные занятия</option>
+            <option value="power">Физическая подготовка</option>
+          </select>
+          <button type="submit" class="hero-btn">Отправить</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="main-footer" id="contact">
+      <div class="footer-container">
+        <div class="footer-contacts">
+          <h2 class="footer-title">Контакты</h2>
+          <div class="contacts-grid">
+            <div class="contact-item">
+              <span>Адрес:</span>
+              <p> <a href="https://go.2gis.com/KW35b">HALYK ARENA (17-й микрорайон, 12)</a></p>
+            </div>
+            <div class="contact-item">
+              <span>Телефон:</span>
+              <p><a href="tel:+77025420013">+7-702-542-0013</a></p>
+            </div>
+            <div class="contact-item">
+              <span>Instagram:</span>
+              <p><a href="https://www.instagram.com/w1n.basketschool/">@w1n.basketschool</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 W1N basketball</p>
+      </div>
+    </footer>
+
+    <!-- JS для исчезающего header -->
+    <script src="./static/js/header.js"></script>
+  </body>
+</html>
